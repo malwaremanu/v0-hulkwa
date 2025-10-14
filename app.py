@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
 import secrets
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # This enables CORS for all routes and origins
 
 # Keep the original minimalist root route
 @app.get("/")
